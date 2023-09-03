@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid | Simple Example</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial;
+        }
+        main {
+            background-color: #fff;
+        }
+
+        h1,p {
+            background-color: green;
+            margin: 0;
+            padding: 3%;
+            border: 3px solid darkgreen;
+        }
+        a {
+            text-decoration: none;
+            background-color: lightgreen;                       
+        }
+
+        /* GRID */
+        main {            
+            width: 70%;
+            margin: 5% auto;
+            height: 70vh;
+
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(5,1fr);         
+        }
+        h1 {
+            /*grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;*/
+
+            /* HW2 */
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 3;
+
+            z-index: 1;
+        }
+        a {
+            padding: 3%;
+
+            /*grid-column-start: 3;
+            grid-column-end: 6;
+            grid-row-start: 3;
+            grid-row-end: 6;*/
+
+            /* HW2 */
+            grid-column: 3 / span 3;
+            grid-row: 3 / span 3;
+
+            text-align: right;            
+            
+            /* HW1 */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;          
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main>        
+        <h1>Hello CSS GRID!!!</h1>      
+        <a href="">THANK YOU!!!</a>            
+    </main>
+    
+</body>
+</html>
